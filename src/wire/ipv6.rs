@@ -250,7 +250,7 @@ impl Cidr {
     /// Create an IPv6 CIDR block from the given address and prefix length.
     ///
     /// # Panics
-    /// This function panics if the prefix length is larger than 128.
+    /// This function panics if the prefix length is equal to or larger than 128.
     pub const fn new(address: Address, prefix_len: u8) -> Cidr {
         assert!(prefix_len <= 128);
         Cidr {
